@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is It Prime?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRb-1Q-oqC">
-                                <rect key="frame" x="147.33333333333331" y="20" width="119.99999999999994" height="35"/>
+                                <rect key="frame" x="147" y="20" width="120" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Gan-EU-dx6"/>
                                     <constraint firstAttribute="width" constant="120" id="Icf-RN-azX"/>
@@ -38,23 +38,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bg1-uv-XbH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. 4, 8 or 29" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bg1-uv-XbH">
                                 <rect key="frame" x="20" y="132" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2c-FI-kcj">
+                                <rect key="frame" x="169" y="196" width="76" height="30"/>
+                                <state key="normal" title="Is It Prime?"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebw-wQ-v9E">
+                                <rect key="frame" x="20" y="251" width="374" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="cFL-J4-fUf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Ebw-wQ-v9E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2Dh-i7-aW9"/>
                             <constraint firstItem="bg1-uv-XbH" firstAttribute="top" secondItem="fJZ-46-CM7" secondAttribute="bottom" constant="38" id="2ey-oa-jw6"/>
                             <constraint firstItem="fJZ-46-CM7" firstAttribute="top" secondItem="eRb-1Q-oqC" secondAttribute="bottom" constant="18" id="3ic-5p-jwJ"/>
                             <constraint firstItem="fJZ-46-CM7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CGE-lc-IkC"/>
+                            <constraint firstItem="Ebw-wQ-v9E" firstAttribute="top" secondItem="f2c-FI-kcj" secondAttribute="bottom" constant="25" id="CMU-Up-qLP"/>
                             <constraint firstItem="bg1-uv-XbH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DRj-3f-lMu"/>
+                            <constraint firstItem="Ebw-wQ-v9E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FTX-kD-kfD"/>
                             <constraint firstItem="bg1-uv-XbH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OBd-ii-3Mc"/>
                             <constraint firstItem="eRb-1Q-oqC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="S9G-cH-8u3"/>
                             <constraint firstItem="eRb-1Q-oqC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Unm-u4-nfE"/>
+                            <constraint firstItem="f2c-FI-kcj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ccw-lR-S2a"/>
                             <constraint firstItem="bg1-uv-XbH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dBe-m1-duf"/>
+                            <constraint firstItem="f2c-FI-kcj" firstAttribute="top" secondItem="bg1-uv-XbH" secondAttribute="bottom" constant="34" id="iZ6-oq-15h"/>
                         </constraints>
                     </view>
                 </viewController>
