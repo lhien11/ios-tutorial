@@ -10,6 +10,43 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var numberTextField: UITextField!
+    
+    @IBAction func isItPrime(_ sender: Any) {
+        // optional binding
+        if let userEnteredString =  numberTextField.text {
+            // casting it to int
+            let userEnteredInteger = Int(userEnteredString)
+            
+            if let number = userEnteredInteger {
+                var isPrime = true
+                
+                
+                if number == 1 {
+                    isPrime = false
+                }
+                var i = 2
+                while i < number {
+                    if number % i == 0 {
+                        isPrime = false
+                    }
+                    i += 1
+                }
+                
+                if isPrime {
+                    resultLabel.text = "\(number) is prime!"
+                }else {
+                    resultLabel.text = "\(number) is not prime"
+                }
+                
+            } else {
+                resultLabel.text = "Please enter a positive whole number"
+            }
+        }
+        
+    }
+    @IBOutlet var resultLabel: UILabel!
+    
     // This is a comment
     override func viewDidLoad() {
         super.viewDidLoad()
