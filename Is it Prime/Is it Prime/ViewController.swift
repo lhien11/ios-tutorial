@@ -24,6 +24,9 @@ class ViewController: UIViewController {
                 
                 if number == 1 {
                     isPrime = false
+                } else if (number < 1){
+                    resultLabel.text = "Please enter a positive whole number"
+                    return
                 }
                 var i = 2
                 while i < number {
@@ -39,7 +42,8 @@ class ViewController: UIViewController {
                     resultLabel.text = "\(number) is not prime"
                 }
                 
-            } else {
+            }
+            else {
                 resultLabel.text = "Please enter a positive whole number"
             }
         }
