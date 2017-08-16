@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		282010371F42D4560007777F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282010361F42D4560007777F /* AppDelegate.swift */; };
-		282010391F42D4560007777F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282010381F42D4560007777F /* ViewController.swift */; };
-		2820103C1F42D4560007777F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2820103A1F42D4560007777F /* Main.storyboard */; };
-		2820103E1F42D4560007777F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2820103D1F42D4560007777F /* Assets.xcassets */; };
-		282010411F42D4560007777F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2820103F1F42D4560007777F /* LaunchScreen.storyboard */; };
+		282010551F436E3C0007777F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282010541F436E3C0007777F /* AppDelegate.swift */; };
+		282010571F436E3C0007777F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282010561F436E3C0007777F /* ViewController.swift */; };
+		2820105A1F436E3C0007777F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282010581F436E3C0007777F /* Main.storyboard */; };
+		2820105C1F436E3C0007777F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2820105B1F436E3C0007777F /* Assets.xcassets */; };
+		2820105F1F436E3C0007777F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2820105D1F436E3C0007777F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		282010331F42D4560007777F /* Egg Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Egg Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		282010361F42D4560007777F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		282010381F42D4560007777F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2820103B1F42D4560007777F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2820103D1F42D4560007777F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		282010401F42D4560007777F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		282010421F42D4560007777F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		282010511F436E3C0007777F /* Table Views.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Table Views.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		282010541F436E3C0007777F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		282010561F436E3C0007777F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		282010591F436E3C0007777F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2820105B1F436E3C0007777F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2820105E1F436E3C0007777F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		282010601F436E3C0007777F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		282010301F42D4560007777F /* Frameworks */ = {
+		2820104E1F436E3C0007777F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,73 +35,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2820102A1F42D4560007777F = {
+		282010481F436E3C0007777F = {
 			isa = PBXGroup;
 			children = (
-				282010351F42D4560007777F /* Egg Timer */,
-				282010341F42D4560007777F /* Products */,
+				282010531F436E3C0007777F /* Table Views */,
+				282010521F436E3C0007777F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		282010341F42D4560007777F /* Products */ = {
+		282010521F436E3C0007777F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				282010331F42D4560007777F /* Egg Timer.app */,
+				282010511F436E3C0007777F /* Table Views.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		282010351F42D4560007777F /* Egg Timer */ = {
+		282010531F436E3C0007777F /* Table Views */ = {
 			isa = PBXGroup;
 			children = (
-				282010361F42D4560007777F /* AppDelegate.swift */,
-				282010381F42D4560007777F /* ViewController.swift */,
-				2820103A1F42D4560007777F /* Main.storyboard */,
-				2820103D1F42D4560007777F /* Assets.xcassets */,
-				2820103F1F42D4560007777F /* LaunchScreen.storyboard */,
-				282010421F42D4560007777F /* Info.plist */,
+				282010541F436E3C0007777F /* AppDelegate.swift */,
+				282010561F436E3C0007777F /* ViewController.swift */,
+				282010581F436E3C0007777F /* Main.storyboard */,
+				2820105B1F436E3C0007777F /* Assets.xcassets */,
+				2820105D1F436E3C0007777F /* LaunchScreen.storyboard */,
+				282010601F436E3C0007777F /* Info.plist */,
 			);
-			path = "Egg Timer";
+			path = "Table Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		282010321F42D4560007777F /* Egg Timer */ = {
+		282010501F436E3C0007777F /* Table Views */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 282010451F42D4560007777F /* Build configuration list for PBXNativeTarget "Egg Timer" */;
+			buildConfigurationList = 282010631F436E3C0007777F /* Build configuration list for PBXNativeTarget "Table Views" */;
 			buildPhases = (
-				2820102F1F42D4560007777F /* Sources */,
-				282010301F42D4560007777F /* Frameworks */,
-				282010311F42D4560007777F /* Resources */,
+				2820104D1F436E3C0007777F /* Sources */,
+				2820104E1F436E3C0007777F /* Frameworks */,
+				2820104F1F436E3C0007777F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Egg Timer";
-			productName = "Egg Timer";
-			productReference = 282010331F42D4560007777F /* Egg Timer.app */;
+			name = "Table Views";
+			productName = "Table Views";
+			productReference = 282010511F436E3C0007777F /* Table Views.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2820102B1F42D4560007777F /* Project object */ = {
+		282010491F436E3C0007777F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Hien Le";
 				TargetAttributes = {
-					282010321F42D4560007777F = {
+					282010501F436E3C0007777F = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = RAJ5QAXJPD;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 2820102E1F42D4560007777F /* Build configuration list for PBXProject "Egg Timer" */;
+			buildConfigurationList = 2820104C1F436E3C0007777F /* Build configuration list for PBXProject "Table Views" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -109,54 +109,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 2820102A1F42D4560007777F;
-			productRefGroup = 282010341F42D4560007777F /* Products */;
+			mainGroup = 282010481F436E3C0007777F;
+			productRefGroup = 282010521F436E3C0007777F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				282010321F42D4560007777F /* Egg Timer */,
+				282010501F436E3C0007777F /* Table Views */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		282010311F42D4560007777F /* Resources */ = {
+		2820104F1F436E3C0007777F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				282010411F42D4560007777F /* LaunchScreen.storyboard in Resources */,
-				2820103E1F42D4560007777F /* Assets.xcassets in Resources */,
-				2820103C1F42D4560007777F /* Main.storyboard in Resources */,
+				2820105F1F436E3C0007777F /* LaunchScreen.storyboard in Resources */,
+				2820105C1F436E3C0007777F /* Assets.xcassets in Resources */,
+				2820105A1F436E3C0007777F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2820102F1F42D4560007777F /* Sources */ = {
+		2820104D1F436E3C0007777F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				282010391F42D4560007777F /* ViewController.swift in Sources */,
-				282010371F42D4560007777F /* AppDelegate.swift in Sources */,
+				282010571F436E3C0007777F /* ViewController.swift in Sources */,
+				282010551F436E3C0007777F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2820103A1F42D4560007777F /* Main.storyboard */ = {
+		282010581F436E3C0007777F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2820103B1F42D4560007777F /* Base */,
+				282010591F436E3C0007777F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		2820103F1F42D4560007777F /* LaunchScreen.storyboard */ = {
+		2820105D1F436E3C0007777F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				282010401F42D4560007777F /* Base */,
+				2820105E1F436E3C0007777F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		282010431F42D4560007777F /* Debug */ = {
+		282010611F436E3C0007777F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +215,7 @@
 			};
 			name = Debug;
 		};
-		282010441F42D4560007777F /* Release */ = {
+		282010621F436E3C0007777F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -259,32 +259,28 @@
 			};
 			name = Release;
 		};
-		282010461F42D4560007777F /* Debug */ = {
+		282010641F436E3C0007777F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RAJ5QAXJPD;
-				INFOPLIST_FILE = "Egg Timer/Info.plist";
+				INFOPLIST_FILE = "Table Views/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Northwest.Egg-Timer";
+				PRODUCT_BUNDLE_IDENTIFIER = "Northwest.Table-Views";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		282010471F42D4560007777F /* Release */ = {
+		282010651F436E3C0007777F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RAJ5QAXJPD;
-				INFOPLIST_FILE = "Egg Timer/Info.plist";
+				INFOPLIST_FILE = "Table Views/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Northwest.Egg-Timer";
+				PRODUCT_BUNDLE_IDENTIFIER = "Northwest.Table-Views";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -292,24 +288,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2820102E1F42D4560007777F /* Build configuration list for PBXProject "Egg Timer" */ = {
+		2820104C1F436E3C0007777F /* Build configuration list for PBXProject "Table Views" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				282010431F42D4560007777F /* Debug */,
-				282010441F42D4560007777F /* Release */,
+				282010611F436E3C0007777F /* Debug */,
+				282010621F436E3C0007777F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		282010451F42D4560007777F /* Build configuration list for PBXNativeTarget "Egg Timer" */ = {
+		282010631F436E3C0007777F /* Build configuration list for PBXNativeTarget "Table Views" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				282010461F42D4560007777F /* Debug */,
-				282010471F42D4560007777F /* Release */,
+				282010641F436E3C0007777F /* Debug */,
+				282010651F436E3C0007777F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2820102B1F42D4560007777F /* Project object */;
+	rootObject = 282010491F436E3C0007777F /* Project object */;
 }
