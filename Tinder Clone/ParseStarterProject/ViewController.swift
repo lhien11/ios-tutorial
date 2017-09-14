@@ -9,6 +9,8 @@
 
 import UIKit
 import Parse
+import Bolts
+
 
 class ViewController: UIViewController {
     
@@ -19,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet var emailText: UITextField!
     
     @IBOutlet var passwordText: UITextField!
+
     
     func createAlert(title: String, message: String) {
         
@@ -82,6 +85,7 @@ class ViewController: UIViewController {
                     } else {
                         
                         print("user successfully signed up")
+                        self.performSegue(withIdentifier: "goToUserInfo", sender: self)
                         
                     }
                     
@@ -110,6 +114,7 @@ class ViewController: UIViewController {
                         
                     } else {
                         print("Logged in")
+                        self.performSegue(withIdentifier: "goToUserInfo", sender: self)
                     }
                     
                 })
@@ -135,6 +140,12 @@ class ViewController: UIViewController {
             changeSignupModeButton.setTitle("Log In", for: [])
             messageLabel.text = "Already have an account?"
             signUpMode = true
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() != nil {
+            performSegue(withIdentifier: "goToUserInfo", sender: self)
         }
     }
     

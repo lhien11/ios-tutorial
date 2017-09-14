@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28D83EDB1F6A41BA0039B83B /* Placeholder_person.png in Resources */ = {isa = PBXBuildFile; fileRef = 28D83EDA1F6A41BA0039B83B /* Placeholder_person.png */; };
+		28D83EDD1F6A42CA0039B83B /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D83EDC1F6A42CA0039B83B /* UserDetailsViewController.swift */; };
 		814C3ACA1B69877600E307BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
 		814C3ACB1B69877600E307BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC81B69877600E307BB /* Images.xcassets */; };
 		81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814A1A49DA1800E65899 /* AppDelegate.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28D83EDA1F6A41BA0039B83B /* Placeholder_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Placeholder_person.png; sourceTree = "<group>"; };
+		28D83EDC1F6A42CA0039B83B /* UserDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		814C3AC71B69877600E307BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		814C3AC81B69877600E307BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,7 +89,9 @@
 			children = (
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
+				28D83EDA1F6A41BA0039B83B /* Placeholder_person.png */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				28D83EDC1F6A42CA0039B83B /* UserDetailsViewController.swift */,
 			);
 			path = ParseStarterProject;
 			sourceTree = "<group>";
@@ -145,6 +151,7 @@
 				TargetAttributes = {
 					81BA81441A49DA1800E65899 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = RAJ5QAXJPD;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -174,6 +181,7 @@
 			files = (
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
+				28D83EDB1F6A41BA0039B83B /* Placeholder_person.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +194,7 @@
 			files = (
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
+				28D83EDD1F6A42CA0039B83B /* UserDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = RAJ5QAXJPD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -308,6 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = RAJ5QAXJPD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
