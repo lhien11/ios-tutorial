@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28D83EC91F6A21D00039B83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D83EC81F6A21D00039B83B /* AppDelegate.swift */; };
+		28D83ECB1F6A21D00039B83B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D83ECA1F6A21D00039B83B /* ViewController.swift */; };
+		28D83ECE1F6A21D00039B83B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D83ECC1F6A21D00039B83B /* Main.storyboard */; };
+		28D83ED01F6A21D00039B83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D83ECF1F6A21D00039B83B /* Assets.xcassets */; };
+		28D83ED31F6A21D00039B83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D83ED11F6A21D00039B83B /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		28D83EC51F6A21D00039B83B /* Swipe Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swipe Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D83EC81F6A21D00039B83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28D83ECA1F6A21D00039B83B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28D83ECD1F6A21D00039B83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28D83ECF1F6A21D00039B83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28D83ED21F6A21D00039B83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		28D83ED41F6A21D00039B83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28D83EC21F6A21CF0039B83B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28D83EBC1F6A21CF0039B83B = {
+			isa = PBXGroup;
+			children = (
+				28D83EC71F6A21D00039B83B /* Swipe Animations */,
+				28D83EC61F6A21D00039B83B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28D83EC61F6A21D00039B83B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28D83EC51F6A21D00039B83B /* Swipe Animations.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28D83EC71F6A21D00039B83B /* Swipe Animations */ = {
+			isa = PBXGroup;
+			children = (
+				28D83EC81F6A21D00039B83B /* AppDelegate.swift */,
+				28D83ECA1F6A21D00039B83B /* ViewController.swift */,
+				28D83ECC1F6A21D00039B83B /* Main.storyboard */,
+				28D83ECF1F6A21D00039B83B /* Assets.xcassets */,
+				28D83ED11F6A21D00039B83B /* LaunchScreen.storyboard */,
+				28D83ED41F6A21D00039B83B /* Info.plist */,
+			);
+			path = "Swipe Animations";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28D83EC41F6A21CF0039B83B /* Swipe Animations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28D83ED71F6A21D00039B83B /* Build configuration list for PBXNativeTarget "Swipe Animations" */;
+			buildPhases = (
+				28D83EC11F6A21CF0039B83B /* Sources */,
+				28D83EC21F6A21CF0039B83B /* Frameworks */,
+				28D83EC31F6A21CF0039B83B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Swipe Animations";
+			productName = "Swipe Animations";
+			productReference = 28D83EC51F6A21D00039B83B /* Swipe Animations.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28D83EBD1F6A21CF0039B83B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Hien Le";
+				TargetAttributes = {
+					28D83EC41F6A21CF0039B83B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = RAJ5QAXJPD;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 28D83EC01F6A21CF0039B83B /* Build configuration list for PBXProject "Swipe Animations" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28D83EBC1F6A21CF0039B83B;
+			productRefGroup = 28D83EC61F6A21D00039B83B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28D83EC41F6A21CF0039B83B /* Swipe Animations */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28D83EC31F6A21CF0039B83B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D83ED31F6A21D00039B83B /* LaunchScreen.storyboard in Resources */,
+				28D83ED01F6A21D00039B83B /* Assets.xcassets in Resources */,
+				28D83ECE1F6A21D00039B83B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28D83EC11F6A21CF0039B83B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D83ECB1F6A21D00039B83B /* ViewController.swift in Sources */,
+				28D83EC91F6A21D00039B83B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		28D83ECC1F6A21D00039B83B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28D83ECD1F6A21D00039B83B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28D83ED11F6A21D00039B83B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28D83ED21F6A21D00039B83B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28D83ED51F6A21D00039B83B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28D83ED61F6A21D00039B83B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28D83ED81F6A21D00039B83B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RAJ5QAXJPD;
+				INFOPLIST_FILE = "Swipe Animations/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Northwest.Swipe-Animations";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		28D83ED91F6A21D00039B83B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RAJ5QAXJPD;
+				INFOPLIST_FILE = "Swipe Animations/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Northwest.Swipe-Animations";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28D83EC01F6A21CF0039B83B /* Build configuration list for PBXProject "Swipe Animations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28D83ED51F6A21D00039B83B /* Debug */,
+				28D83ED61F6A21D00039B83B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28D83ED71F6A21D00039B83B /* Build configuration list for PBXNativeTarget "Swipe Animations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28D83ED81F6A21D00039B83B /* Debug */,
+				28D83ED91F6A21D00039B83B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28D83EBD1F6A21CF0039B83B /* Project object */;
+}
