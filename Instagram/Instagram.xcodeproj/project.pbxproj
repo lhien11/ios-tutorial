@@ -13,6 +13,11 @@
 		286C9AD71F6B896B00E19C2D /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AD61F6B896B00E19C2D /* ActivityViewController.swift */; };
 		286C9AD91F6B898D00E19C2D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AD81F6B898D00E19C2D /* ProfileViewController.swift */; };
 		286C9ADB1F6B948200E19C2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286C9ADA1F6B948200E19C2D /* Main.storyboard */; };
+		286C9ADF1F6BC0FE00E19C2D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286C9ADE1F6BC0FE00E19C2D /* Home.storyboard */; };
+		286C9AE11F6BC32800E19C2D /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AE01F6BC32800E19C2D /* Discover.storyboard */; };
+		286C9AE31F6BC38400E19C2D /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AE21F6BC38400E19C2D /* Camera.storyboard */; };
+		286C9AE51F6BC42200E19C2D /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AE41F6BC42200E19C2D /* Activity.storyboard */; };
+		286C9AE71F6BC4B600E19C2D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AE61F6BC4B600E19C2D /* Profile.storyboard */; };
 		28B84B521F6B358D002B26BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B84B511F6B358D002B26BE /* AppDelegate.swift */; };
 		28B84B571F6B358D002B26BE /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B84B551F6B358D002B26BE /* Start.storyboard */; };
 		28B84B591F6B358D002B26BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B84B581F6B358D002B26BE /* Assets.xcassets */; };
@@ -28,6 +33,11 @@
 		286C9AD61F6B896B00E19C2D /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		286C9AD81F6B898D00E19C2D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		286C9ADA1F6B948200E19C2D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		286C9ADE1F6BC0FE00E19C2D /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		286C9AE01F6BC32800E19C2D /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		286C9AE21F6BC38400E19C2D /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		286C9AE41F6BC42200E19C2D /* Activity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
+		286C9AE61F6BC4B600E19C2D /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		28B84B4E1F6B358D002B26BE /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B84B511F6B358D002B26BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28B84B561F6B358D002B26BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Start.storyboard; sourceTree = "<group>"; };
@@ -81,6 +91,11 @@
 				28B84B5A1F6B358D002B26BE /* LaunchScreen.storyboard */,
 				28B84B551F6B358D002B26BE /* Start.storyboard */,
 				286C9ADA1F6B948200E19C2D /* Main.storyboard */,
+				286C9AE61F6BC4B600E19C2D /* Profile.storyboard */,
+				286C9AE41F6BC42200E19C2D /* Activity.storyboard */,
+				286C9AE21F6BC38400E19C2D /* Camera.storyboard */,
+				286C9AE01F6BC32800E19C2D /* Discover.storyboard */,
+				286C9ADE1F6BC0FE00E19C2D /* Home.storyboard */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -146,9 +161,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				28B84B5C1F6B358D002B26BE /* LaunchScreen.storyboard in Resources */,
+				286C9AE31F6BC38400E19C2D /* Camera.storyboard in Resources */,
+				286C9ADF1F6BC0FE00E19C2D /* Home.storyboard in Resources */,
 				28B84B591F6B358D002B26BE /* Assets.xcassets in Resources */,
 				28B84B571F6B358D002B26BE /* Start.storyboard in Resources */,
 				286C9ADB1F6B948200E19C2D /* Main.storyboard in Resources */,
+				286C9AE71F6BC4B600E19C2D /* Profile.storyboard in Resources */,
+				286C9AE11F6BC32800E19C2D /* Discover.storyboard in Resources */,
+				286C9AE51F6BC42200E19C2D /* Activity.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

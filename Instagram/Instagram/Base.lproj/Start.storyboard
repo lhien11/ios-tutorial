@@ -184,13 +184,13 @@
             </objects>
             <point key="canvasLocation" x="-82" y="812"/>
         </scene>
-        <!--Main-->
+        <!--MainNavigator-->
         <scene sceneID="y2q-E7-5wI">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="Mkj-RA-AqJ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MainNavigator" storyboardName="Main" bundleIdentifier="Northwest.Instagram" referencedIdentifier="MainNavigator" id="Mkj-RA-AqJ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kcw-MN-pGb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974" y="36"/>
+            <point key="canvasLocation" x="920" y="323"/>
         </scene>
     </scenes>
     <resources>
