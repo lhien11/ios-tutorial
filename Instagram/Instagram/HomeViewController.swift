@@ -15,8 +15,6 @@ class HomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        // change color of view 
-        view.backgroundColor = UIColor.black 
     }
 
     override func didReceiveMemoryWarning() {
