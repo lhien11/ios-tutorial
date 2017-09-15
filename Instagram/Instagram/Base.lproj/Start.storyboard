@@ -30,7 +30,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="esg-2V-xBY"/>
                                         </constraints>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
@@ -68,7 +68,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.80207416373239437" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="dismiss_onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZLF-Tn-hW3"/>
                                     <segue destination="lhM-6f-Ddg" kind="show" id="Q06-Ud-lX9"/>
                                 </connections>
                             </button>
@@ -93,6 +92,10 @@
                             <constraint firstItem="l3r-EV-uHE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zHx-5j-sWq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="6CL-y2-O2O" id="FjO-t0-Fe9"/>
+                        <outlet property="passwordTextField" destination="qhz-ls-5SB" id="xN3-Kq-HVX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,6 +122,9 @@
                                 <state key="normal" title="Already have an account? Sign In">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.80207416369999995" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="kSU-xd-9Pc"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pna-Zt-QNR">
                                 <rect key="frame" x="32" y="236.5" width="311" height="194"/>
@@ -179,6 +185,12 @@
                             <constraint firstItem="Pna-Zt-QNR" firstAttribute="centerX" secondItem="Qzf-6O-jKa" secondAttribute="centerX" id="jNh-Qs-a6Y"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="8Ma-mm-BT5" id="vnH-5P-DYO"/>
+                        <outlet property="passwordTextField" destination="d3i-Fa-oa3" id="xfy-Xq-W5k"/>
+                        <outlet property="profileImage" destination="fue-Km-FdS" id="71U-xX-GmG"/>
+                        <outlet property="usernameTextField" destination="ZXc-gK-aie" id="NnC-wA-BA9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqP-oe-sFy" sceneMemberID="firstResponder"/>
             </objects>

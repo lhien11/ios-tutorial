@@ -59,6 +59,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		286C9AE81F6BCD5C00E19C2D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				286C9AE41F6BC42200E19C2D /* Activity.storyboard */,
+				286C9AE21F6BC38400E19C2D /* Camera.storyboard */,
+				286C9AE01F6BC32800E19C2D /* Discover.storyboard */,
+				286C9ADE1F6BC0FE00E19C2D /* Home.storyboard */,
+				286C9ADA1F6B948200E19C2D /* Main.storyboard */,
+				286C9AE61F6BC4B600E19C2D /* Profile.storyboard */,
+				28B84B551F6B358D002B26BE /* Start.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		28B84B451F6B358D002B26BE = {
 			isa = PBXGroup;
 			children = (
@@ -89,13 +103,7 @@
 				28B84B651F6B41D1002B26BE /* SignUpViewController.swift */,
 				28B84B581F6B358D002B26BE /* Assets.xcassets */,
 				28B84B5A1F6B358D002B26BE /* LaunchScreen.storyboard */,
-				28B84B551F6B358D002B26BE /* Start.storyboard */,
-				286C9ADA1F6B948200E19C2D /* Main.storyboard */,
-				286C9AE61F6BC4B600E19C2D /* Profile.storyboard */,
-				286C9AE41F6BC42200E19C2D /* Activity.storyboard */,
-				286C9AE21F6BC38400E19C2D /* Camera.storyboard */,
-				286C9AE01F6BC32800E19C2D /* Discover.storyboard */,
-				286C9ADE1F6BC0FE00E19C2D /* Home.storyboard */,
+				286C9AE81F6BCD5C00E19C2D /* Storyboards */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
