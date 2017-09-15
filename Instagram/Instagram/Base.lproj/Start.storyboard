@@ -157,7 +157,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Mkj-RA-AqJ" kind="presentation" id="siK-s6-sdx"/>
+                                            <action selector="signUpBtn_TouchUpInside:" destination="lhM-6f-Ddg" eventType="touchUpInside" id="xWx-Oa-1Jy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -194,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqP-oe-sFy" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82" y="812"/>
+            <point key="canvasLocation" x="-82" y="837"/>
         </scene>
         <!--MainNavigator-->
         <scene sceneID="y2q-E7-5wI">
@@ -208,7 +208,4 @@
     <resources>
         <image name="placeholder-img" width="507" height="400"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="siK-s6-sdx"/>
-    </inferredMetricsTieBreakers>
 </document>
