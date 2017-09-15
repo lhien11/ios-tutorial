@@ -144,12 +144,32 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if PFUser.current() != nil {
-            performSegue(withIdentifier: "goToUserInfo", sender: self)
-        }
+        redirectUser()
+
     }
     
     @IBOutlet var messageLabel: UILabel!
+    
+    func redirectUser() {
+        
+        if PFUser.current() != nil {
+            
+            if PFUser.current()?["isFemale"] != nil && PFUser.current()?["isInterestedInWomen"] != nil && PFUser.current()?["photo"] != nil {
+                
+                performSegue(withIdentifier: "swipeFromInitialSegue", sender: self)
+                
+                
+            } else {
+                
+                performSegue(withIdentifier: "goToUserInfo", sender: self)
+                
+            }
+            
+        }
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

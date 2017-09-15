@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ht1-3w-jRt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ht1-3w-jRt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,6 +80,7 @@
                         <outlet property="passwordText" destination="viA-fg-pZ6" id="GL4-VE-vLn"/>
                         <outlet property="signupOrLogin" destination="dBW-qz-BQK" id="O5A-Ui-qxe"/>
                         <segue destination="3eX-MT-ODw" kind="show" identifier="goToUserInfo" id="TN3-XL-bNh"/>
+                        <segue destination="2Qa-Ea-bq4" kind="show" identifier="swipeFromInitialSegue" id="yw3-XY-b5a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AbL-7B-uHN" sceneMemberID="firstResponder"/>
@@ -186,14 +187,65 @@
                         <outlet property="genderSwitch" destination="jeM-kH-5jf" id="JV0-XD-FQh"/>
                         <outlet property="interestSwitch" destination="5fF-nt-QI1" id="omP-qP-8uu"/>
                         <outlet property="userImage" destination="YUB-fB-tsI" id="EKj-Ng-a0I"/>
+                        <segue destination="2Qa-Ea-bq4" kind="show" identifier="showSwipingViewController" id="6xb-ow-bZg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Z2-7O-q8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="43"/>
+            <point key="canvasLocation" x="865" y="602"/>
+        </scene>
+        <!--Swiping View Controller-->
+        <scene sceneID="puj-R6-WfD">
+            <objects>
+                <viewController id="2Qa-Ea-bq4" customClass="SwipingViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gGu-El-v04"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kl9-NI-4ih"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iHo-HZ-dJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZd-xK-s3W">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Tinder" id="0BS-Nz-zcL">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Q37-Yw-frN">
+                                            <connections>
+                                                <segue destination="ht1-3w-jRt" kind="show" identifier="logoutSegue" id="RPE-k9-DzZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe left to reject, right to accept" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPQ-s3-Xm8">
+                                <rect key="frame" x="55" y="517" width="264" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDa-Ec-Eun">
+                                <rect key="frame" x="16" y="102" width="343" height="375"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="WDa-Ec-Eun" id="rMP-mS-9yK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pT-TO-z1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535.2" y="36.431784107946029"/>
         </scene>
     </scenes>
     <resources>
         <image name="Placeholder_person.png" width="480" height="480"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yw3-XY-b5a"/>
+    </inferredMetricsTieBreakers>
 </document>

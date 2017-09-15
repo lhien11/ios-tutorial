@@ -24,8 +24,24 @@ class UserDetailsViewController: UIViewController, UINavigationControllerDelegat
         
     }
     
+    /*
+     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+     picker.dismissViewControllerAnimated(true, completion: nil)
+     
+     if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+     imagePost.image = image
+     } else if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+     imagePost.image = image
+     } else {
+     imagePost.image = nil
+     }
+     }
+ */
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            userImage.image = image
+        } else if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             userImage.image = image
         }
         self.dismiss(animated: true, completion: nil)
@@ -44,7 +60,8 @@ class UserDetailsViewController: UIViewController, UINavigationControllerDelegat
         PFUser.current()?["isFemale"] = genderSwitch.isOn
         PFUser.current()?["isInterestedInWomen"] = interestSwitch.isOn
         
-//        let imageData = UIImagePNGRepresentation(userImage.image!)
+       // let imageData = UIImagePNGRepresentation(userImage.image!)
+        
         let imageData = UIImageJPEGRepresentation(userImage.image!, 0.5)
 
         
@@ -62,6 +79,7 @@ class UserDetailsViewController: UIViewController, UINavigationControllerDelegat
                 
             } else {
                 print("Updated")
+                self.performSegue(withIdentifier: "showSwipingViewController", sender: self)
             }
         })
     }
@@ -90,7 +108,7 @@ class UserDetailsViewController: UIViewController, UINavigationControllerDelegat
                 }
             })
         }
-        
+        /*
         let urlArray = ["http://cdn.madamenoire.com/wp-content/uploads/2013/08/penny-proud.jpg", "http://static.makers.com/styles/mobile_gallery/s3/betty-boop-cartoon-576km071213_0.jpg?itok=9qNg6GUd", "http://file1.answcdn.com/answ-cld/image/upload/f_jpg,w_672,c_fill,g_faces:center,q_70/v1/tk/view/cew/e8eccfc7/e367e6b52c18acd08104627205bbaa4ae16ee2fd.jpeg", "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=1760886", "http://vignette3.wikia.nocookie.net/simpsons/images/0/0b/Marge_Simpson.png/revision/20140826010629", "http://static6.comicvine.com/uploads/square_small/0/2617/103863-63963-torongo-leela.JPG", "https://itfinspiringwomen.files.wordpress.com/2014/03/scooby-doo-tv-09.jpg", "https://s-media-cache-ak0.pinimg.com/236x/9c/5e/86/9c5e86be6bf91c9dea7bac0ab473baa4.jpg"]
         
         var counter = 0
@@ -132,6 +150,7 @@ class UserDetailsViewController: UIViewController, UINavigationControllerDelegat
             }
             
         }
+         */
 
     }
     override func didReceiveMemoryWarning() {
