@@ -7,17 +7,17 @@
 //
 
 import UIKit
-import FirebaseAuth 
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
-
+    
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
- 
+    
     @IBOutlet var signInButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         emailTextField.backgroundColor = UIColor.clear
         emailTextField.tintColor = UIColor.white
@@ -41,17 +41,18 @@ class SignInViewController: UIViewController {
         
         handleEmailAndPasswordValidation()
         
-  
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        // The sign up must require all the inputs, if one of the field is missing then it is still added but it doesn't present itself on the database because the attritrube image is missing
         super.viewDidAppear(animated)
-        
+        //print("Current User: \(String(describing: Auth.auth().currentUser?.email))")
         if (Auth.auth().currentUser) != nil {
             self.performSegue(withIdentifier: "signInToTabbarVc", sender: nil)
         }
         
-
+        
     }
     
     func handleEmailAndPasswordValidation() {
@@ -75,21 +76,18 @@ class SignInViewController: UIViewController {
         signInButton.isEnabled = true
         
     }
-
+    
     @IBAction func signInButton_TouchUpInside(_ sender: Any) {
         
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-            
-            if error != nil {
-                print("Error: " + error!.localizedDescription)
-                return
-            }
-           // print(user?.email)
+        AuthService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess:{
             self.performSegue(withIdentifier: "signInToTabbarVc", sender: nil)
-        }
-        
+            
+        }, onError: { error in
+            
+            print("error: \(error!)")
+            
+        })
         
     }
-
-
+    
 }

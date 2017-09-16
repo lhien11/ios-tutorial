@@ -12,7 +12,7 @@ import FirebaseDatabase
 import FirebaseStorage
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController {
         bottomLayerUsername.backgroundColor = UIColor(red: 50/256, green: 50/255, blue: 25/255, alpha: 1).cgColor
         usernameTextField.layer.addSublayer(bottomLayerUsername)
         
-
+        
         emailTextField.backgroundColor = UIColor.clear
         emailTextField.tintColor = UIColor.white
         emailTextField.textColor = UIColor.white
@@ -61,6 +61,7 @@ class SignUpViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.handleSelectedProfileImageView))
         profileImage.addGestureRecognizer(tapGesture)
         profileImage.isUserInteractionEnabled = true
+        signUpButton.isEnabled = false
         
         handleEmailAndPasswordValidation()
     }
@@ -80,7 +81,7 @@ class SignUpViewController: UIViewController {
             signUpButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
             signUpButton.isEnabled = false
             return
-
+            
         }
         signUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         signUpButton.isEnabled = true
@@ -96,45 +97,19 @@ class SignUpViewController: UIViewController {
         
     }
     @IBAction func signUpBtn_TouchUpInside(_ sender: Any) {
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-            
-            if error != nil {
-                print(error!.localizedDescription)
-                return
-            }
-            
-            let uid = user?.uid
-            let storageRef = Storage.storage().reference(forURL: "gs://instagramclone-6b003.appspot.com").child("profile_image").child(uid!)
-            if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1){
-                storageRef.putData(imageData, metadata: nil, completion: { (metadata, error) in
-                    if error != nil {
-                        return
-                    }
-                    let profileImageUrl = metadata?.downloadURL()?.absoluteString
-
-                    self.setUserInformation(profileImageUrl: profileImageUrl!, username: self.usernameTextField.text!, email: self.emailTextField.text!, uid: uid!)
-                    
-                })
-            }
-            
-    
+        if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1){
+            AuthService.signUp(username: usernameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, imageData: imageData, onSuccess: {
+                self.performSegue(withIdentifier: "signUpToTabbarVc", sender: nil)
+                
+            }, onError: { (errorString) in
+                print("Error sign up : \(String(describing: errorString))")
+            })
+        } else {
+            print("Profile Image can't be empty")
         }
     }
     
-    func setUserInformation(profileImageUrl: String, username: String, email: String, uid: String){
-        
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
-        //print(ref.description())
-        let usersReference = ref.child("users")
-        //print(usersReference.description())
-        let newUserReference = usersReference.child(uid)
-        newUserReference.setValue(["username": username, "email": email, "profileImageUrl": profileImageUrl])
-        // print(" description: \(newUserReference.description())")
-        self.performSegue(withIdentifier: "signUpToTabbarVc", sender: nil)
-        
-    }
-
+    
 }
 
 
@@ -146,8 +121,8 @@ extension SignUpViewController:  UIImagePickerControllerDelegate, UINavigationCo
             selectedImage = image
             profileImage.image = image
         }
-       // print(info)
-       // profileImage.image = infoPhoto
+        // print(info)
+        // profileImage.image = infoPhoto
         dismiss(animated: true, completion: nil)
     }
 }
