@@ -13,7 +13,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -53,7 +53,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Mkj-RA-AqJ" kind="presentation" id="Dh3-Ze-3bR"/>
+                                            <action selector="signInButton_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECE-KW-OAq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -71,8 +71,8 @@
                                     <segue destination="lhM-6f-Ddg" kind="show" id="Q06-Ud-lX9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgK-iW-vh1">
-                                <rect key="frame" x="122" y="72" width="131.5" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InstaFam" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgK-iW-vh1">
+                                <rect key="frame" x="128" y="72" width="120" height="58"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -95,6 +95,8 @@
                     <connections>
                         <outlet property="emailTextField" destination="6CL-y2-O2O" id="FjO-t0-Fe9"/>
                         <outlet property="passwordTextField" destination="qhz-ls-5SB" id="xN3-Kq-HVX"/>
+                        <outlet property="signInButton" destination="kKU-dh-q5n" id="vYh-0l-UEx"/>
+                        <segue destination="Mkj-RA-AqJ" kind="presentation" identifier="signInToTabbarVc" id="fNC-GJ-ha0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -189,7 +191,9 @@
                         <outlet property="emailTextField" destination="8Ma-mm-BT5" id="vnH-5P-DYO"/>
                         <outlet property="passwordTextField" destination="d3i-Fa-oa3" id="xfy-Xq-W5k"/>
                         <outlet property="profileImage" destination="fue-Km-FdS" id="71U-xX-GmG"/>
+                        <outlet property="signUpButton" destination="GRK-x0-vIf" id="mF0-qX-rwG"/>
                         <outlet property="usernameTextField" destination="ZXc-gK-aie" id="NnC-wA-BA9"/>
+                        <segue destination="Mkj-RA-AqJ" kind="presentation" identifier="signUpToTabbarVc" id="ROm-ov-kkT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqP-oe-sFy" sceneMemberID="firstResponder"/>
@@ -208,4 +212,7 @@
     <resources>
         <image name="placeholder-img" width="507" height="400"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="fNC-GJ-ha0"/>
+    </inferredMetricsTieBreakers>
 </document>

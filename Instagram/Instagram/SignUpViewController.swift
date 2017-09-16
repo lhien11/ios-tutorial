@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    @IBOutlet var signUpButton: UIButton!
     @IBOutlet var profileImage: UIImageView!
     var selectedImage: UIImage?
     
@@ -61,6 +62,28 @@ class SignUpViewController: UIViewController {
         profileImage.addGestureRecognizer(tapGesture)
         profileImage.isUserInteractionEnabled = true
         
+        handleEmailAndPasswordValidation()
+    }
+    
+    func handleEmailAndPasswordValidation() {
+        usernameTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
+        emailTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
+    }
+    
+    func textFieldDidChange() {
+        
+        // A guard statement is used to transfer program control out of a scope if one or more conditions aren’t met.
+        
+        guard let username = usernameTextField.text, !username.isEmpty, let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
+            
+            signUpButton.setTitleColor(UIColor.lightText, for: UIControlState.normal)
+            signUpButton.isEnabled = false
+            return
+
+        }
+        signUpButton.setTitleColor(UIColor.white, for: UIControlState.normal)
+        signUpButton.isEnabled = true
         
     }
     
@@ -73,9 +96,6 @@ class SignUpViewController: UIViewController {
         
     }
     @IBAction func signUpBtn_TouchUpInside(_ sender: Any) {
-        
-
-        
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             
             if error != nil {
@@ -90,19 +110,9 @@ class SignUpViewController: UIViewController {
                     if error != nil {
                         return
                     }
-                    
                     let profileImageUrl = metadata?.downloadURL()?.absoluteString
-                    
-                    var ref: DatabaseReference!
-                    ref = Database.database().reference()
-                    //print(ref.description())
-                    let usersReference = ref.child("users")
-                    //print(usersReference.description())
-                    let newUserReference = usersReference.child(uid!)
-                    newUserReference.setValue(["username": self.usernameTextField.text!, "email": self.emailTextField.text!, "profileImageUrl": profileImageUrl])
-                    // print(" description: \(newUserReference.description())")
 
-                    
+                    self.setUserInformation(profileImageUrl: profileImageUrl!, username: self.usernameTextField.text!, email: self.emailTextField.text!, uid: uid!)
                     
                 })
             }
@@ -110,8 +120,24 @@ class SignUpViewController: UIViewController {
     
         }
     }
+    
+    func setUserInformation(profileImageUrl: String, username: String, email: String, uid: String){
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        //print(ref.description())
+        let usersReference = ref.child("users")
+        //print(usersReference.description())
+        let newUserReference = usersReference.child(uid)
+        newUserReference.setValue(["username": username, "email": email, "profileImageUrl": profileImageUrl])
+        // print(" description: \(newUserReference.description())")
+        self.performSegue(withIdentifier: "signUpToTabbarVc", sender: nil)
+        
+    }
 
 }
+
+
 
 extension SignUpViewController:  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

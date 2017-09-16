@@ -7,9 +7,26 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
+    @IBAction func logout_TouchUpInside(_ sender: Any) {
+       // print(Auth.auth().currentUser!)
+        
+        do {
+            try Auth.auth().signOut()
+        } catch let logoutError {
+            print("Error: \(logoutError)")
+        }
+        
+        //print(Auth.auth().currentUser)
+        
+        let storyboard = UIStoryboard(name: "Start", bundle: nil)
+        let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
+        self.present(signInVC, animated: true, completion: nil)
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
