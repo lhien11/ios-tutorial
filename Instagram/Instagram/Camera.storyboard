@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Camera-->
+        <!--New Post-->
         <scene sceneID="all-X2-LGc">
             <objects>
                 <viewController id="fX0-jm-9sM" customClass="CameraViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,13 +21,86 @@
                     <view key="view" contentMode="scaleToFill" id="ocq-fp-KPy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8sA-Mw-8k4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="83"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-photo" translatesAutoresizingMaskIntoConstraints="NO" id="bFg-Qa-hbt">
+                                        <rect key="frame" x="8" y="4" width="115" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="EOy-Xw-Be1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZNU-oi-vAJ">
+                                        <rect key="frame" x="131" y="0.0" width="240" height="79"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZNU-oi-vAJ" secondAttribute="trailing" constant="4" id="4Bu-ei-Pby"/>
+                                    <constraint firstItem="ZNU-oi-vAJ" firstAttribute="leading" secondItem="bFg-Qa-hbt" secondAttribute="trailing" constant="8" symbolic="YES" id="FA0-G2-TMI"/>
+                                    <constraint firstAttribute="bottom" secondItem="bFg-Qa-hbt" secondAttribute="bottom" constant="4" id="KSm-vR-1OC"/>
+                                    <constraint firstItem="bFg-Qa-hbt" firstAttribute="top" secondItem="8sA-Mw-8k4" secondAttribute="top" constant="4" id="OHy-BA-irG"/>
+                                    <constraint firstItem="bFg-Qa-hbt" firstAttribute="top" secondItem="ZNU-oi-vAJ" secondAttribute="top" constant="4" id="ZFH-T9-y3v"/>
+                                    <constraint firstItem="bFg-Qa-hbt" firstAttribute="bottom" secondItem="ZNU-oi-vAJ" secondAttribute="bottom" id="dme-o5-JBo"/>
+                                    <constraint firstItem="bFg-Qa-hbt" firstAttribute="leading" secondItem="8sA-Mw-8k4" secondAttribute="leadingMargin" id="wTA-af-6E9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-dJ-cdR">
+                                <rect key="frame" x="24" y="608" width="327" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3g4-Hg-UGR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGE-V2-V78">
+                                <rect key="frame" x="6" y="560" width="363" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uQR-je-qfa"/>
+                                </constraints>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButton_TouchUpInside:" destination="fX0-jm-9sM" eventType="touchUpInside" id="zV1-e6-46I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="ILB-dJ-cdR" secondAttribute="bottom" constant="9" id="3b6-81-1Xl"/>
+                            <constraint firstItem="eGE-V2-V78" firstAttribute="top" secondItem="8sA-Mw-8k4" secondAttribute="bottom" constant="413" id="7V7-pE-V6o"/>
+                            <constraint firstItem="8sA-Mw-8k4" firstAttribute="leading" secondItem="ocq-fp-KPy" secondAttribute="leading" id="8GP-vj-mdR"/>
+                            <constraint firstItem="8sA-Mw-8k4" firstAttribute="centerX" secondItem="ILB-dJ-cdR" secondAttribute="centerX" id="ABv-TN-Zj4"/>
+                            <constraint firstItem="ILB-dJ-cdR" firstAttribute="top" secondItem="eGE-V2-V78" secondAttribute="bottom" constant="-2" id="BfE-LR-127"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eGE-V2-V78" secondAttribute="trailing" constant="-10" id="a9c-MS-OZ1"/>
+                            <constraint firstItem="8sA-Mw-8k4" firstAttribute="top" secondItem="TPS-qD-eRb" secondAttribute="bottom" id="cu7-KX-oeK"/>
+                            <constraint firstItem="eGE-V2-V78" firstAttribute="leading" secondItem="ocq-fp-KPy" secondAttribute="leadingMargin" constant="-10" id="dcu-Dn-Xyk"/>
+                            <constraint firstAttribute="trailing" secondItem="8sA-Mw-8k4" secondAttribute="trailing" id="u9e-ae-zZf"/>
+                            <constraint firstItem="ILB-dJ-cdR" firstAttribute="leading" secondItem="ocq-fp-KPy" secondAttribute="leadingMargin" constant="8" id="win-oV-sUK"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Camera" id="PvY-F8-fAz"/>
+                    <navigationItem key="navigationItem" title="New Post" id="PvY-F8-fAz">
+                        <barButtonItem key="leftBarButtonItem" title="Cancle" id="fFP-dO-pDo">
+                            <connections>
+                                <action selector="cancle_TouchUpInside:" destination="fX0-jm-9sM" id="xE4-wT-qlF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancleButton" destination="fFP-dO-pDo" id="M0D-S6-gs5"/>
+                        <outlet property="captionTextView" destination="ZNU-oi-vAJ" id="2OM-L4-x8e"/>
+                        <outlet property="photo" destination="bFg-Qa-hbt" id="xMd-gL-sop"/>
+                        <outlet property="shareButton" destination="eGE-V2-V78" id="5hb-fq-7E0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBh-tr-jKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4513" y="-27"/>
+            <point key="canvasLocation" x="4512.8000000000002" y="-27.436281859070466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rpD-F2-Ic5">
@@ -53,5 +127,6 @@
     </scenes>
     <resources>
         <image name="Photo" width="22" height="23"/>
+        <image name="placeholder-photo" width="840" height="600"/>
     </resources>
 </document>

@@ -58,7 +58,7 @@ class SignUpViewController: UIViewController {
         profileImage.layer.cornerRadius = 40
         profileImage.clipsToBounds = true
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.handleSelectedProfileImageView))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleSelectedProfileImageView))
         profileImage.addGestureRecognizer(tapGesture)
         profileImage.isUserInteractionEnabled = true
         signUpButton.isEnabled = false
@@ -66,10 +66,16 @@ class SignUpViewController: UIViewController {
         handleEmailAndPasswordValidation()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+
+
+    }
+    
     func handleEmailAndPasswordValidation() {
-        usernameTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
-        emailTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
-        passwordTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
+        usernameTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
+        emailTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
     }
     
     func textFieldDidChange() {
@@ -97,15 +103,19 @@ class SignUpViewController: UIViewController {
         
     }
     @IBAction func signUpBtn_TouchUpInside(_ sender: Any) {
+        view.endEditing(true)
+        ProgressHUD.show("Waiting ...", interaction: false)
         if let profileImg = self.selectedImage, let imageData = UIImageJPEGRepresentation(profileImg, 0.1){
             AuthService.signUp(username: usernameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, imageData: imageData, onSuccess: {
+                ProgressHUD.showSuccess("Success")
                 self.performSegue(withIdentifier: "signUpToTabbarVc", sender: nil)
                 
             }, onError: { (errorString) in
-                print("Error sign up : \(String(describing: errorString))")
+                ProgressHUD.showError(errorString!)
+               // print("Error sign up : \(String(describing: errorString))")
             })
         } else {
-            print("Profile Image can't be empty")
+            ProgressHUD.showError("Profile Image can't be empty")
         }
     }
     
@@ -116,7 +126,7 @@ class SignUpViewController: UIViewController {
 
 extension SignUpViewController:  UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        print("did Finish Picking Media")
+        //print("did Finish Picking Media")
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             selectedImage = image
             profileImage.image = image

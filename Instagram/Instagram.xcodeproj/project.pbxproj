@@ -21,6 +21,8 @@
 		286C9AEB1F6BD05A00E19C2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AEA1F6BD05A00E19C2D /* GoogleService-Info.plist */; };
 		286C9AED1F6D1B7F00E19C2D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AEC1F6D1B7F00E19C2D /* AuthService.swift */; };
 		286C9AEF1F6D399200E19C2D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AEE1F6D399200E19C2D /* Config.swift */; };
+		286C9AF41F6D7A9E00E19C2D /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AF11F6D7A9E00E19C2D /* ProgressHUD.bundle */; };
+		286C9AF51F6D7A9E00E19C2D /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AF31F6D7A9E00E19C2D /* ProgressHUD.m */; };
 		28B84B521F6B358D002B26BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B84B511F6B358D002B26BE /* AppDelegate.swift */; };
 		28B84B571F6B358D002B26BE /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B84B551F6B358D002B26BE /* Start.storyboard */; };
 		28B84B591F6B358D002B26BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B84B581F6B358D002B26BE /* Assets.xcassets */; };
@@ -46,6 +48,10 @@
 		286C9AEA1F6BD05A00E19C2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		286C9AEC1F6D1B7F00E19C2D /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		286C9AEE1F6D399200E19C2D /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		286C9AF01F6D7A9D00E19C2D /* Instagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagram-Bridging-Header.h"; sourceTree = "<group>"; };
+		286C9AF11F6D7A9E00E19C2D /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		286C9AF21F6D7A9E00E19C2D /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		286C9AF31F6D7A9E00E19C2D /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		28B84B4E1F6B358D002B26BE /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B84B511F6B358D002B26BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28B84B561F6B358D002B26BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Start.storyboard; sourceTree = "<group>"; };
@@ -128,6 +134,10 @@
 				28B84B5A1F6B358D002B26BE /* LaunchScreen.storyboard */,
 				286C9AEA1F6BD05A00E19C2D /* GoogleService-Info.plist */,
 				28B84B5D1F6B358D002B26BE /* Info.plist */,
+				286C9AF11F6D7A9E00E19C2D /* ProgressHUD.bundle */,
+				286C9AF21F6D7A9E00E19C2D /* ProgressHUD.h */,
+				286C9AF31F6D7A9E00E19C2D /* ProgressHUD.m */,
+				286C9AF01F6D7A9D00E19C2D /* Instagram-Bridging-Header.h */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -185,6 +195,7 @@
 					28B84B4D1F6B358D002B26BE = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = RAJ5QAXJPD;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -212,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286C9AF41F6D7A9E00E19C2D /* ProgressHUD.bundle in Resources */,
 				28B84B5C1F6B358D002B26BE /* LaunchScreen.storyboard in Resources */,
 				286C9AE31F6BC38400E19C2D /* Camera.storyboard in Resources */,
 				286C9ADF1F6BC0FE00E19C2D /* Home.storyboard in Resources */,
@@ -298,6 +310,7 @@
 				286C9AED1F6D1B7F00E19C2D /* AuthService.swift in Sources */,
 				286C9AD11F6B88F200E19C2D /* HomeViewController.swift in Sources */,
 				286C9AD71F6B896B00E19C2D /* ActivityViewController.swift in Sources */,
+				286C9AF51F6D7A9E00E19C2D /* ProgressHUD.m in Sources */,
 				286C9AD31F6B891E00E19C2D /* DiscoverViewController.swift in Sources */,
 				286C9AEF1F6D399200E19C2D /* Config.swift in Sources */,
 				286C9AD91F6B898D00E19C2D /* ProfileViewController.swift in Sources */,
@@ -427,12 +440,15 @@
 			baseConfigurationReference = D8E720FBFFA03E5903B2A11E /* Pods-Instagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = RAJ5QAXJPD;
 				INFOPLIST_FILE = Instagram/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Northwest.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Instagram/Instagram-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -442,12 +458,14 @@
 			baseConfigurationReference = C887BA510587FB8F5B2789ED /* Pods-Instagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = RAJ5QAXJPD;
 				INFOPLIST_FILE = Instagram/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Northwest.Instagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Instagram/Instagram-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

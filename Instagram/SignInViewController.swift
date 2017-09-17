@@ -41,7 +41,10 @@ class SignInViewController: UIViewController {
         
         handleEmailAndPasswordValidation()
         
-        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,8 +59,8 @@ class SignInViewController: UIViewController {
     }
     
     func handleEmailAndPasswordValidation() {
-        emailTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
-        passwordTextField.addTarget(self, action: #selector(SignUpViewController.textFieldDidChange), for: UIControlEvents.editingChanged)
+        emailTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
+        passwordTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: UIControlEvents.editingChanged)
     }
     
     
@@ -78,13 +81,17 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInButton_TouchUpInside(_ sender: Any) {
+        view.endEditing(true)
+        ProgressHUD.show("Waiting ...", interaction: false)
         
         AuthService.signIn(email: emailTextField.text!, password: passwordTextField.text!, onSuccess:{
+            ProgressHUD.showSuccess("Success")
             self.performSegue(withIdentifier: "signInToTabbarVc", sender: nil)
             
         }, onError: { error in
             
-            print("error: \(error!)")
+            ProgressHUD.showError(error!)
+            //print("error: \(error!)")
             
         })
         
