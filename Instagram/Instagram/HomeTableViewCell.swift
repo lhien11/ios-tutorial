@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class HomeTableViewCell: UITableViewCell {
 
@@ -26,16 +27,37 @@ class HomeTableViewCell: UITableViewCell {
         }
     }
     
-    func updateView(){
+    func updateView() {
         captionLabel.text = post?.caption
-        profileImageView.image = UIImage(named: "photo1.jpeg")
-        nameLabel.text = "Steve"
         if let photoUrlString = post?.photoUrl {
             let photoUrl = URL(string: photoUrlString)
             postImageView.sd_setImage(with: photoUrl)
         }
+        print(" i am in the updateView in HomeTableViewCell")
+        setupUserInfo()
     }
- 
+    
+    func setupUserInfo() {
+        print(" I am in the setupuser info")
+        print("post?.uid = \(post?.uid)")
+        if let uid = post?.uid {
+            print( " did i get here")
+            Database.database().reference().child("users").child(uid).observeSingleEvent(of: DataEventType.value, with: {
+                snapshot in
+                if let dict = snapshot.value as? [String: Any] {
+                    print("i am in the setupUserInfo")
+                    let user = User.transformUser(dict: dict)
+                    self.nameLabel.text = user.username
+                    if let photoUrlString = user.profileImageUrl {
+                        let photoUrl = URL(string: photoUrlString)
+                        self.profileImageView.sd_setImage(with: photoUrl)
+                    }
+                }
+                
+            })
+        }
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

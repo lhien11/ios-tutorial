@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283B871D1F71665200213A27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B871C1F71665200213A27 /* User.swift */; };
 		286C9AD11F6B88F200E19C2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AD01F6B88F200E19C2D /* HomeViewController.swift */; };
 		286C9AD31F6B891E00E19C2D /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AD21F6B891E00E19C2D /* DiscoverViewController.swift */; };
 		286C9AD51F6B894800E19C2D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AD41F6B894800E19C2D /* CameraViewController.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		0780C2B9CFDA7BE50BB5B0EF /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		283B871C1F71665200213A27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		286C9AD01F6B88F200E19C2D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		286C9AD21F6B891E00E19C2D /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		286C9AD41F6B894800E19C2D /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				28C70F931F700FC200EA77AA /* Post.swift */,
+				283B871C1F71665200213A27 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				28B84B521F6B358D002B26BE /* AppDelegate.swift in Sources */,
 				28C70F941F700FC200EA77AA /* Post.swift in Sources */,
 				286C9AED1F6D1B7F00E19C2D /* AuthService.swift in Sources */,
+				283B871D1F71665200213A27 /* User.swift in Sources */,
 				286C9AD11F6B88F200E19C2D /* HomeViewController.swift in Sources */,
 				286C9AD71F6B896B00E19C2D /* ActivityViewController.swift in Sources */,
 				286C9AF51F6D7A9E00E19C2D /* ProgressHUD.m in Sources */,
