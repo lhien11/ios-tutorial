@@ -39,8 +39,9 @@ class CameraViewController: UIViewController {
         }
     }
     @IBAction func cancle_TouchUpInside(_ sender: Any) {
+
         clean()
-        
+        handlePostImage()
     }
     
     @IBAction func shareButton_TouchUpInside(_ sender: Any) {
@@ -114,7 +115,7 @@ class CameraViewController: UIViewController {
 
 extension CameraViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        print("did Finish Picking Media")
+       // print("did Finish Picking Media")
 
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             selectedImage = image

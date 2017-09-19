@@ -8,9 +8,28 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
+import SDWebImage
 
 class HomeViewController: UIViewController {
 
+    var posts = [Post]()
+    @IBOutlet weak var tableView: UITableView!
+    
+    func loadPosts() {
+        
+        Database.database().reference().child("posts").observe(.childAdded) { (snapshot: DataSnapshot) in
+            
+           // print(snapshot.value!)
+            if let dict = snapshot.value as? [String: Any] {
+                let newPost = Post.transformPostPhoto(dict: dict)
+                self.posts.append(newPost)
+                self.tableView.reloadData()
+            }
+            
+        }
+        
+    }
     @IBAction func logout_TouchUpInside(_ sender: Any) {
        // print(Auth.auth().currentUser!)
         
@@ -29,25 +48,26 @@ class HomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.estimatedRowHeight = 521
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.dataSource = self
+        loadPosts()
+                
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! HomeTableViewCell
+        let post = posts[indexPath.row]
+        cell.post = post 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        return cell
     }
-    */
-
 }

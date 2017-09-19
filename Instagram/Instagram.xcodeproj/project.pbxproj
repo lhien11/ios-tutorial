@@ -18,7 +18,6 @@
 		286C9AE31F6BC38400E19C2D /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AE21F6BC38400E19C2D /* Camera.storyboard */; };
 		286C9AE51F6BC42200E19C2D /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AE41F6BC42200E19C2D /* Activity.storyboard */; };
 		286C9AE71F6BC4B600E19C2D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AE61F6BC4B600E19C2D /* Profile.storyboard */; };
-		286C9AEB1F6BD05A00E19C2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AEA1F6BD05A00E19C2D /* GoogleService-Info.plist */; };
 		286C9AED1F6D1B7F00E19C2D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AEC1F6D1B7F00E19C2D /* AuthService.swift */; };
 		286C9AEF1F6D399200E19C2D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AEE1F6D399200E19C2D /* Config.swift */; };
 		286C9AF41F6D7A9E00E19C2D /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 286C9AF11F6D7A9E00E19C2D /* ProgressHUD.bundle */; };
@@ -29,6 +28,9 @@
 		28B84B5C1F6B358D002B26BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B84B5A1F6B358D002B26BE /* LaunchScreen.storyboard */; };
 		28B84B641F6B3867002B26BE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B84B631F6B3867002B26BE /* SignInViewController.swift */; };
 		28B84B661F6B41D1002B26BE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B84B651F6B41D1002B26BE /* SignUpViewController.swift */; };
+		28C70F911F700ED400EA77AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28C70F901F700ED400EA77AA /* GoogleService-Info.plist */; };
+		28C70F941F700FC200EA77AA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C70F931F700FC200EA77AA /* Post.swift */; };
+		28C70F9F1F7119DF00EA77AA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C70F9E1F7119DF00EA77AA /* HomeTableViewCell.swift */; };
 		CD7294C48568F9B7DE9BF361 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0780C2B9CFDA7BE50BB5B0EF /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +47,6 @@
 		286C9AE21F6BC38400E19C2D /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		286C9AE41F6BC42200E19C2D /* Activity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		286C9AE61F6BC4B600E19C2D /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		286C9AEA1F6BD05A00E19C2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		286C9AEC1F6D1B7F00E19C2D /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		286C9AEE1F6D399200E19C2D /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		286C9AF01F6D7A9D00E19C2D /* Instagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Instagram-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -60,6 +61,9 @@
 		28B84B5D1F6B358D002B26BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28B84B631F6B3867002B26BE /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
 		28B84B651F6B41D1002B26BE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		28C70F901F700ED400EA77AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		28C70F931F700FC200EA77AA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		28C70F9E1F7119DF00EA77AA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		C887BA510587FB8F5B2789ED /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 		D8E720FBFFA03E5903B2A11E /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,19 +131,37 @@
 			children = (
 				28B84B511F6B358D002B26BE /* AppDelegate.swift */,
 				286C9AEC1F6D1B7F00E19C2D /* AuthService.swift */,
+				28C70FA01F7119E400EA77AA /* Views */,
 				286C9AEE1F6D399200E19C2D /* Config.swift */,
+				28C70F921F700FAF00EA77AA /* Model */,
 				286C9AE91F6BCFFA00E19C2D /* ViewControllers */,
 				286C9AE81F6BCD5C00E19C2D /* Storyboards */,
 				28B84B581F6B358D002B26BE /* Assets.xcassets */,
 				28B84B5A1F6B358D002B26BE /* LaunchScreen.storyboard */,
-				286C9AEA1F6BD05A00E19C2D /* GoogleService-Info.plist */,
 				28B84B5D1F6B358D002B26BE /* Info.plist */,
+				28C70F901F700ED400EA77AA /* GoogleService-Info.plist */,
 				286C9AF11F6D7A9E00E19C2D /* ProgressHUD.bundle */,
 				286C9AF21F6D7A9E00E19C2D /* ProgressHUD.h */,
 				286C9AF31F6D7A9E00E19C2D /* ProgressHUD.m */,
 				286C9AF01F6D7A9D00E19C2D /* Instagram-Bridging-Header.h */,
 			);
 			path = Instagram;
+			sourceTree = "<group>";
+		};
+		28C70F921F700FAF00EA77AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28C70F931F700FC200EA77AA /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		28C70FA01F7119E400EA77AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				28C70F9E1F7119DF00EA77AA /* HomeTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		6D02A8641081E85877EE22F4 /* Frameworks */ = {
@@ -231,8 +253,8 @@
 				28B84B571F6B358D002B26BE /* Start.storyboard in Resources */,
 				286C9ADB1F6B948200E19C2D /* Main.storyboard in Resources */,
 				286C9AE71F6BC4B600E19C2D /* Profile.storyboard in Resources */,
-				286C9AEB1F6BD05A00E19C2D /* GoogleService-Info.plist in Resources */,
 				286C9AE11F6BC32800E19C2D /* Discover.storyboard in Resources */,
+				28C70F911F700ED400EA77AA /* GoogleService-Info.plist in Resources */,
 				286C9AE51F6BC42200E19C2D /* Activity.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +304,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Instagram/Pods-Instagram-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -289,6 +312,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -306,7 +330,9 @@
 			files = (
 				28B84B661F6B41D1002B26BE /* SignUpViewController.swift in Sources */,
 				28B84B641F6B3867002B26BE /* SignInViewController.swift in Sources */,
+				28C70F9F1F7119DF00EA77AA /* HomeTableViewCell.swift in Sources */,
 				28B84B521F6B358D002B26BE /* AppDelegate.swift in Sources */,
+				28C70F941F700FC200EA77AA /* Post.swift in Sources */,
 				286C9AED1F6D1B7F00E19C2D /* AuthService.swift in Sources */,
 				286C9AD11F6B88F200E19C2D /* HomeViewController.swift in Sources */,
 				286C9AD71F6B896B00E19C2D /* ActivityViewController.swift in Sources */,

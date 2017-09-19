@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>164424770697-5vosir3g03cse2n543mantjvlse80c1l.apps.googleusercontent.com</string>
+	<string>137659892868-ovtjq0n4c96e5jmmjmvhravc99ch85cg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.164424770697-5vosir3g03cse2n543mantjvlse80c1l</string>
+	<string>com.googleusercontent.apps.137659892868-ovtjq0n4c96e5jmmjmvhravc99ch85cg</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAJSvRvp0gvdkt_93n7gHUzXY9xKN_NYFc</string>
+	<string>AIzaSyB2Y6glnqbqagVmdXA0kR_c0fw5vGgccXo</string>
 	<key>GCM_SENDER_ID</key>
-	<string>164424770697</string>
+	<string>137659892868</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Northwest.Instagram</string>
 	<key>PROJECT_ID</key>
-	<string>instagramclone-6b003</string>
+	<string>instagram-42233</string>
 	<key>STORAGE_BUCKET</key>
-	<string>instagramclone-6b003.appspot.com</string>
+	<string>instagram-42233.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:164424770697:ios:53d7e1373da2dcfc</string>
+	<string>1:137659892868:ios:53d7e1373da2dcfc</string>
 	<key>DATABASE_URL</key>
-	<string>https://instagramclone-6b003.firebaseio.com</string>
+	<string>https://instagram-42233.firebaseio.com</string>
 </dict>
 </plist>
