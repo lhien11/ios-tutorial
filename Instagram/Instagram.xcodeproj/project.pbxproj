@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		283B871D1F71665200213A27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B871C1F71665200213A27 /* User.swift */; };
+		283B87211F72490C00213A27 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B87201F72490C00213A27 /* CommentTableViewCell.swift */; };
+		283B87251F728F8D00213A27 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B87241F728F8D00213A27 /* CommentViewController.swift */; };
+		283B87271F73719200213A27 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B87261F73719200213A27 /* Comment.swift */; };
 		286C9AD11F6B88F200E19C2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AD01F6B88F200E19C2D /* HomeViewController.swift */; };
 		286C9AD31F6B891E00E19C2D /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AD21F6B891E00E19C2D /* DiscoverViewController.swift */; };
 		286C9AD51F6B894800E19C2D /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C9AD41F6B894800E19C2D /* CameraViewController.swift */; };
@@ -38,6 +41,9 @@
 /* Begin PBXFileReference section */
 		0780C2B9CFDA7BE50BB5B0EF /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		283B871C1F71665200213A27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		283B87201F72490C00213A27 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		283B87241F728F8D00213A27 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		283B87261F73719200213A27 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		286C9AD01F6B88F200E19C2D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		286C9AD21F6B891E00E19C2D /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		286C9AD41F6B894800E19C2D /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 			children = (
 				286C9AD61F6B896B00E19C2D /* ActivityViewController.swift */,
 				286C9AD41F6B894800E19C2D /* CameraViewController.swift */,
+				283B87241F728F8D00213A27 /* CommentViewController.swift */,
 				286C9AD21F6B891E00E19C2D /* DiscoverViewController.swift */,
 				286C9AD01F6B88F200E19C2D /* HomeViewController.swift */,
 				286C9AD81F6B898D00E19C2D /* ProfileViewController.swift */,
@@ -155,6 +162,7 @@
 			children = (
 				28C70F931F700FC200EA77AA /* Post.swift */,
 				283B871C1F71665200213A27 /* User.swift */,
+				283B87261F73719200213A27 /* Comment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				28C70F9E1F7119DF00EA77AA /* HomeTableViewCell.swift */,
+				283B87201F72490C00213A27 /* CommentTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -336,8 +345,11 @@
 				28C70F9F1F7119DF00EA77AA /* HomeTableViewCell.swift in Sources */,
 				28B84B521F6B358D002B26BE /* AppDelegate.swift in Sources */,
 				28C70F941F700FC200EA77AA /* Post.swift in Sources */,
+				283B87271F73719200213A27 /* Comment.swift in Sources */,
 				286C9AED1F6D1B7F00E19C2D /* AuthService.swift in Sources */,
 				283B871D1F71665200213A27 /* User.swift in Sources */,
+				283B87211F72490C00213A27 /* CommentTableViewCell.swift in Sources */,
+				283B87251F728F8D00213A27 /* CommentViewController.swift in Sources */,
 				286C9AD11F6B88F200E19C2D /* HomeViewController.swift in Sources */,
 				286C9AD71F6B896B00E19C2D /* ActivityViewController.swift in Sources */,
 				286C9AF51F6D7A9E00E19C2D /* ProgressHUD.m in Sources */,

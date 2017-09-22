@@ -27,41 +27,42 @@ class HomeTableViewCell: UITableViewCell {
         }
     }
     
+    
+    var user: User? {
+        didSet {
+            setupUserInfo()
+        }
+    }
+    
     func updateView() {
         captionLabel.text = post?.caption
         if let photoUrlString = post?.photoUrl {
             let photoUrl = URL(string: photoUrlString)
             postImageView.sd_setImage(with: photoUrl)
         }
-        print(" i am in the updateView in HomeTableViewCell")
         setupUserInfo()
     }
     
     func setupUserInfo() {
-        print(" I am in the setupuser info")
-        print("post?.uid = \(post?.uid)")
-        if let uid = post?.uid {
-            print( " did i get here")
-            Database.database().reference().child("users").child(uid).observeSingleEvent(of: DataEventType.value, with: {
-                snapshot in
-                if let dict = snapshot.value as? [String: Any] {
-                    print("i am in the setupUserInfo")
-                    let user = User.transformUser(dict: dict)
-                    self.nameLabel.text = user.username
-                    if let photoUrlString = user.profileImageUrl {
-                        let photoUrl = URL(string: photoUrlString)
-                        self.profileImageView.sd_setImage(with: photoUrl)
-                    }
-                }
-                
-            })
+        nameLabel.text = user?.username
+        if let photoUrlString = user?.profileImageUrl {
+            let photoUrl = URL(string: photoUrlString)
+            profileImageView.sd_setImage(with: photoUrl, placeholderImage: UIImage(named: "placeholderImg"))
+            
         }
     }
     
-    
+    // it is only called when a cell is loaded into memory but not when a cell is reused
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        nameLabel.text = ""
+        captionLabel.text = ""
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        profileImageView.image = UIImage(named: "placeholderImg")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

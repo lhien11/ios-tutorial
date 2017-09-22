@@ -14,32 +14,48 @@ import SDWebImage
 class HomeViewController: UIViewController {
 
     var posts = [Post]()
+    var users = [User]()
+    
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     func loadPosts() {
-        
+        activityIndicatorView.startAnimating()
         Database.database().reference().child("posts").observe(.childAdded) { (snapshot: DataSnapshot) in
-            
-           // print(snapshot.value!)
+            //print("Thread.isMainThread \(Thread.isMainThread)")
             if let dict = snapshot.value as? [String: Any] {
                 let newPost = Post.transformPostPhoto(dict: dict)
-                self.posts.append(newPost)
-                self.tableView.reloadData()
+                self.fetchUser(uid: newPost.uid!, completed: {
+                    self.posts.append(newPost)
+                    self.activityIndicatorView.stopAnimating()
+                    self.tableView.reloadData()
+                    
+                })
             }
-            
         }
-        
+    }
+    
+    
+    @IBAction func button_TouchUpInside(_ sender: Any) {
+        self.performSegue(withIdentifier: "CommentSegue", sender: nil)
+    }
+    func fetchUser(uid: String, completed:  @escaping () -> Void ) {
+        Database.database().reference().child("users").child(uid).observeSingleEvent(of: DataEventType.value, with: {
+            snapshot in
+            if let dict = snapshot.value as? [String: Any] {
+                let user = User.transformUser(dict: dict)
+                self.users.append(user)
+                completed()
+            }
+        })
     }
     @IBAction func logout_TouchUpInside(_ sender: Any) {
-       // print(Auth.auth().currentUser!)
         
         do {
             try Auth.auth().signOut()
         } catch let logoutError {
             print("Error: \(logoutError)")
         }
-        
-        //print(Auth.auth().currentUser)
         
         let storyboard = UIStoryboard(name: "Start", bundle: nil)
         let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
@@ -55,6 +71,11 @@ class HomeViewController: UIViewController {
                 
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
 
 }
 
@@ -67,7 +88,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! HomeTableViewCell
         
         let post = posts[indexPath.row]
-        cell.post = post 
+        let user = users[indexPath.row]
+        cell.post = post
+        cell.user = user
 
         return cell
     }

@@ -74,7 +74,6 @@ class CameraViewController: UIViewController {
             return
         }
         let currentUserId = currentUser.uid
-        print("currentuserId = \(currentUser.uid)")
         
         
         
